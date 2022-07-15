@@ -62,7 +62,7 @@ model Card {
   id             Int       @id @default(autoincrement())
   userId         Int
   title          String
-  number         String    @unique
+  number         String    @unique @db.VarChar(16)
   holderName     String
   securityCode   String    @db.VarChar(4)
   expirationDate String    @db.VarChar(5)
