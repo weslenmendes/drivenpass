@@ -3,28 +3,28 @@ import bcrypt from "bcrypt";
 
 const cryptr = new Cryptr(process.env.CRYPTR_KEY);
 
-function encryptSecurityCode(password: string) {
+function encryptByCryptr(password: string) {
   return cryptr.encrypt(password);
 }
 
-function decryptSecurityCode(encryptedSecurityCode: string) {
+function decryptByCryptr(encryptedSecurityCode: string) {
   return cryptr.decrypt(encryptedSecurityCode);
 }
 
-function encryptPassword(password: string) {
+function encryptByBcrypt(password: string) {
   const saltRounds = 10;
   return bcrypt.hashSync(password, saltRounds);
 }
 
-function decryptPassword(password: string, encryptedPassword: string) {
+function decryptByBcrypt(password: string, encryptedPassword: string) {
   if (!encryptedPassword) return true;
 
   return bcrypt.compareSync(password, encryptedPassword);
 }
 
 export default {
-  encryptPassword,
-  encryptSecurityCode,
-  decryptPassword,
-  decryptSecurityCode,
+  encryptByCryptr,
+  decryptByCryptr,
+  encryptByBcrypt,
+  decryptByBcrypt,
 };

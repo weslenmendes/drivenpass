@@ -18,7 +18,7 @@ export async function register(user: CreateUserData) {
   }
 
   const newUserData = user;
-  const hashedPassword = encryptUtils.encryptPassword(user.password);
+  const hashedPassword = encryptUtils.encryptByBcrypt(user.password);
   newUserData.password = hashedPassword;
 
   await userRepository.register(newUserData);
@@ -27,7 +27,7 @@ export async function register(user: CreateUserData) {
 export async function login(user: CreateUserData) {
   const userData = await userExists(user.email);
 
-  const isTheSamePassword = encryptUtils.decryptPassword(
+  const isTheSamePassword = encryptUtils.decryptByBcrypt(
     user.password,
     userData.password,
   );
