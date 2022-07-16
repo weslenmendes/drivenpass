@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import { generateError } from "./../errors/errorGenerator.js";
 
 const privateKey = process.env.JWT_PRIVATE_KEY;
-const expiration = process.env.JWT_EXPIRATION_AT || "1d";
+const expiration = process.env.JWT_EXPIRATION_IN || "1d";
 
 function generateToken(info: any) {
   const data = { ...info };
@@ -18,7 +18,7 @@ function validateToken(token: string) {
   let data = null;
 
   jwt.verify(token, privateKey, function (err, decoded) {
-    const errorName = err.name || "";
+    const errorName = err?.name || "";
 
     if (errorName === "TokenExpiredError")
       throw generateError({
