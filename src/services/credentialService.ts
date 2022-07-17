@@ -34,7 +34,7 @@ async function createCredential(
 async function getCredential(id: number, userId: number) {
   const credential = await credentialExists(id);
 
-  await isOwnerOfThatCredential(userId, credential.userId);
+  isOwnerOfThatCredential(userId, credential.userId);
 
   credential.password = encryptUtils.decryptByCryptr(credential.password);
 
@@ -54,7 +54,7 @@ async function getCredentials(userId: number) {
 async function deleteCredential(id: number, userId: number) {
   const credential = await credentialExists(id);
 
-  await isOwnerOfThatCredential(userId, credential.userId);
+  isOwnerOfThatCredential(userId, credential.userId);
 
   await credentialRepository.deleteCredentialById(id);
 }
