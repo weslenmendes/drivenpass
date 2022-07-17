@@ -62,9 +62,9 @@ model Card {
   id             Int       @id @default(autoincrement())
   userId         Int
   title          String
-  number         String    @unique @db.VarChar(16)
+  number         String    @db.VarChar(16)
   holderName     String
-  securityCode   String    @db.VarChar(4)
+  securityCode   String
   expirationDate String    @db.VarChar(5)
   password       String
   isVirtual      Boolean   @default(false)
