@@ -1,7 +1,7 @@
 # <p align = "center">DrivenPass API</p>
 
 <p align = "center">
-   <img src="https://raw.githubusercontent.com/weslenmendes/assets-apis/12c25f311ba1a6d3d831d62ba5adbbacff723999/drivenpass-api/icons8-lock.svg?token=AO7SL62R653C2R3IHMRHOKDC2WOD4" alt="" width="200" />
+   <img src="https://i.ibb.co/r4nJbjV/icons8-lock.png" alt="" width="200" />
 </p>
 
 ## 📋 Description
