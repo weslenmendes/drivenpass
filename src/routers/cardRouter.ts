@@ -10,21 +10,25 @@ import {
 
 const cardRouter = Router();
 
-cardRouter.use(tokenValidator);
+cardRouter.get("/cards", tokenValidator, cardController.getCards);
 
-cardRouter.get("/cards", cardController.getCards);
 cardRouter.get(
   "/cards/:id",
+  tokenValidator,
   validateSchema(cardSP.schema, cardSP.local),
   cardController.getCard,
 );
+
 cardRouter.post(
   "/cards",
+  tokenValidator,
   validateSchema(cardSB.schema, cardSB.local),
   cardController.createCard,
 );
+
 cardRouter.delete(
   "/cards/:id",
+  tokenValidator,
   validateSchema(cardSP.schema, cardSP.local),
   cardController.deleteCard,
 );

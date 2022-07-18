@@ -12,6 +12,7 @@ authRouter.post(
   validateSchema(userSchema.schema, userSchema.local),
   authController.register,
 );
+
 authRouter.post(
   "/sign-in",
   validateSchema(userSchema.schema, userSchema.local),

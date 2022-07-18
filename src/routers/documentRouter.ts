@@ -15,18 +15,21 @@ documentRouter.get(
   tokenValidator,
   documentController.getDocuments,
 );
+
 documentRouter.get(
   "/documents/:id",
   tokenValidator,
   validateSchema(documentSP.schema, documentSP.local),
   documentController.getDocument,
 );
+
 documentRouter.post(
   "/documents",
   tokenValidator,
   validateSchema(documentSB.schema, documentSB.local),
   documentController.addDocument,
 );
+
 documentRouter.delete(
   "/documents/:id",
   tokenValidator,

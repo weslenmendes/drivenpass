@@ -11,21 +11,25 @@ import {
 
 const networkRouter = Router();
 
-networkRouter.use(tokenValidator);
+networkRouter.get("/wifis", tokenValidator, networkController.getWifis);
 
-networkRouter.get("/wifis", networkController.getWifis);
 networkRouter.get(
   "/wifis/:id",
+  tokenValidator,
   validateSchema(networkSP.schema, networkSP.local),
   networkController.getWifi,
 );
+
 networkRouter.post(
   "/wifis",
+  tokenValidator,
   validateSchema(networkSB.schema, networkSB.local),
   networkController.addWifi,
 );
+
 networkRouter.delete(
   "/wifis/:id",
+  tokenValidator,
   validateSchema(networkSP.schema, networkSP.local),
   networkController.removeWifi,
 );
