@@ -1,7 +1,7 @@
 # <p align = "center">DrivenPass API</p>
 
 <p align = "center">
-   <img src="https://raw.githubusercontent.com/weslenmendes/assets-apis/12c25f311ba1a6d3d831d62ba5adbbacff723999/drivenpass-api/icons8-lock.svg?token=AO7SL6Y2X7CLORJ7YMKUJE3C2WEVQ" alt="" width="200" />
+   <img src="https://raw.githubusercontent.com/weslenmendes/assets-apis/12c25f311ba1a6d3d831d62ba5adbbacff723999/drivenpass-api/icons8-lock.svg?token=AO7SL62R653C2R3IHMRHOKDC2WOD4" alt="" width="200" />
 </p>
 
 ## 📋 Description
@@ -18,7 +18,7 @@ Allowed wireless network is Wi-Fi type only. The documents allowed are the Natio
 - Node.js
 - TypeScript
 - Prisma
-- PostgreSQL
+- Postgres
 - JWTs
 - REST APIs
 - Relational Database
@@ -55,7 +55,7 @@ POST /sign-in
 ```yml
 POST /credentials
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {
         "title": string,
@@ -70,7 +70,7 @@ POST /credentials
 ```yml
 GET /credentials/:id
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -80,7 +80,7 @@ GET /credentials/:id
 ```yml
 GET /credentials
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -90,7 +90,7 @@ GET /credentials
 ```yml
 DELETE /credentials/:id
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -100,7 +100,7 @@ DELETE /credentials/:id
 ```yml
 POST /notes
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {
         "title": string,
@@ -113,7 +113,7 @@ POST /notes
 ```yml
 GET /notes/:id
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -123,7 +123,7 @@ GET /notes/:id
 ```yml
 GET /notes
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -133,7 +133,7 @@ GET /notes
 ```yml
 DELETE /notes/:id
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -143,7 +143,7 @@ DELETE /notes/:id
 ```yml
 POST /cards
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {
         "title": string,
@@ -162,7 +162,7 @@ POST /cards
 ```yml
 GET /cards/:id
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -172,7 +172,7 @@ GET /cards/:id
 ```yml
 GET /cards
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -182,7 +182,7 @@ GET /cards
 ```yml
 DELETE /cards/:id
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -192,7 +192,7 @@ DELETE /cards/:id
 ```yml
 POST /networks
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {
         "title": string,
@@ -206,7 +206,7 @@ POST /networks
 ```yml
 GET /networks/:id
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -216,7 +216,7 @@ GET /networks/:id
 ```yml
 GET /networks
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -226,7 +226,7 @@ GET /networks
 ```yml
 DELETE /networks/:id
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -236,7 +236,7 @@ DELETE /networks/:id
 ```yml
 POST /documents
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {
         "fullName": string,
@@ -253,7 +253,7 @@ POST /documents
 ```yml
 GET /documents/:id
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -263,7 +263,7 @@ GET /documents/:id
 ```yml
 GET /documents
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
@@ -273,7 +273,7 @@ GET /documents
 ```yml
 DELETE /documents/:id
     - headers: {
-        Authorization: "Bearer +valid token"
+        "Authorization": "Bearer <token>"
       }
     - body: {}
 ```
