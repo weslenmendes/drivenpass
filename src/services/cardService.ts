@@ -69,7 +69,7 @@ function isOwnerOfThatCard(userId: number, ownerId: number) {
   if (userId !== ownerId) {
     throw generateError({
       type: "UnauthorizedError",
-      message: "You are not authorized to access this note.",
+      message: "You are not authorized to access this card.",
     });
   }
 }
