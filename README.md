@@ -187,10 +187,10 @@ DELETE /cards/:id
     - body: {}
 ```
 
-### Add wifi
+### Add network
 
 ```yml
-POST /wifis
+POST /networks
     - headers: {
         Authorization: "Bearer +valid token"
       }
@@ -201,30 +201,30 @@ POST /wifis
       }
 ```
 
-### Get wifi
+### Get network
 
 ```yml
-GET /wifis/:id
+GET /networks/:id
     - headers: {
         Authorization: "Bearer +valid token"
       }
     - body: {}
 ```
 
-### Get wifis
+### Get networks
 
 ```yml
-GET /wifis
+GET /networks
     - headers: {
         Authorization: "Bearer +valid token"
       }
     - body: {}
 ```
 
-### Remove wifi
+### Remove network
 
 ```yml
-DELETE /wifis/:id
+DELETE /networks/:id
     - headers: {
         Authorization: "Bearer +valid token"
       }
